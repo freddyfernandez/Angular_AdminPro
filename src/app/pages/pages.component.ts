@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pages.component.html',
   styles: [
   ]
+
 })
 export class PagesComponent implements OnInit {
 
@@ -14,3 +15,6 @@ export class PagesComponent implements OnInit {
   }
 
 }
+
+
+

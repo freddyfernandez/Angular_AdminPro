@@ -1,0 +1,22 @@
+<div class="input-group ">
+    <span class="input-group-btn ">
+    <button class="btn btn-primary "
+      
+     (click)="cambiarValor(-5)"
+     type="button"><!--se añadio envento click typescript-->
+        <i class="fa fa-minus "></i>
+    </button>
+   </span>
+
+    <input type="text " class="form-control " placeholder="progreso" min="0" max="100" [(ngModel)]="progreso">
+    <!--se añadio variable typescript-->
+
+    <span class="input-group-btn ">
+   <button class="btn btn-primary " 
+    (click)="cambiarValor(+5)"
+    type="button ">
+    <i class="fa fa-plus "></i>
+
+   </button>
+    </span>
+</div>

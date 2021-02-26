@@ -8,6 +8,6 @@ import { Component} from '@angular/core';
 })
 export class NopagefoundComponent  {
 
-  year=new Date().getFullYear();
+  year=new Date().getFullYear()
 
 }
