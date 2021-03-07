@@ -1,3 +1,4 @@
+//DATOS ADICIONALES A LA CLASE 
 export interface RegisterForm{
 nombre: string;
 email: string;
