@@ -10,7 +10,6 @@ import { LoginForm } from '../interfaces/login-form.interfaces';
 import { cargaUsuarios } from '../interfaces/cargar-usuarios.interfaces';
 import { Usuario } from '../models/usuario.model';
 
-
 const base_url= environment.base_url;
 declare const gapi:any;
 
@@ -154,4 +153,17 @@ export class UsuarioService {
         )
     
   }
+
+  eliminarUsuario( usuario: Usuario ) {
+    
+    // /usuarios/5eff3c5054f5efec174e9c84
+    const url = `${ base_url }/usuarios/${ usuario.uid }`;
+    return this.http.delete( url, this.headers );
+  }
+
+  guardarUsuario( usuario: Usuario ) {
+
+    return this.http.put(`${ base_url }/usuarios/${ usuario.uid }`, usuario, this.headers );
+
+  }  
 }

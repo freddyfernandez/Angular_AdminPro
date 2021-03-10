@@ -10,6 +10,9 @@ import { UsuariosComponent } from "./mantenimiento/usuarios/usuarios.component";
 import { AccountSettingsComponent } from "./account-settings/account-settings.component";
 import { RxjsComponent } from "./rxjs/rxjs.component";
 import { PerfilComponent } from "./perfil/perfil.component";
+import { MedicosComponent } from "./mantenimiento/medicos/medicos.component";
+import { HospitalesComponent } from "./mantenimiento/hospitales/hospitales.component";
+import { MedicoComponent } from "./mantenimiento/medicos/medico.component";
 
 
 const routes: Routes = [
@@ -31,8 +34,11 @@ const routes: Routes = [
      
 
       //Mantenimiento
-      {path: 'usuarios',component: UsuariosComponent,data:{titulo:'Usuario de aplicacion'}},
-
+      {path: 'usuarios',component: UsuariosComponent,data:{titulo:'Mantenimiento de Usuarios'}},
+      {path: 'hospitales',component: HospitalesComponent,data:{titulo:'Mantenimiento de Hospitales'}},
+      {path: 'medicos',component: MedicosComponent,data:{titulo:'Mantenimiento de Medicos'}},
+      //componentes especializado
+      {path: 'medico/:id',component: MedicoComponent,data:{titulo:'Mantenimiento de Medicos'}},
      ]
   },
 
