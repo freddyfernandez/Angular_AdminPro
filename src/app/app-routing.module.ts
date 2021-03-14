@@ -8,6 +8,7 @@ import { AuthRoutingModule } from './auth/auth.routing';
 //componentes
 
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 
@@ -17,8 +18,7 @@ const routes: Routes = [
   //RECORDATORIO: RUTAS FIJAS POR MODULO//
   //path:--> '/dashboard' enlaza en PagesRouting
   //path:--> '/auth' enlaza en AuthRounting
-
-  {path: '', redirectTo:'dashboard', pathMatch: 'full' },
+  {path: '',redirectTo:'', pathMatch: 'full',component: HomeComponent,data: { titulo: 'Home' }},
   {path: '**', component: NopagefoundComponent },
 
 ];

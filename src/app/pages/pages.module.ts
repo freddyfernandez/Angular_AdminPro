@@ -22,6 +22,8 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { HospitalesComponent } from './mantenimiento/hospitales/hospitales.component';
 import { MedicosComponent } from './mantenimiento/medicos/medicos.component';
 import { MedicoComponent } from './mantenimiento/medicos/medico.component';
+import { BusquedaComponent } from './busqueda/busqueda.component';
+import { HomeComponent } from './home/home.component';
 
 //AQUI SE ACTUALIZA LOS NUEVOS COMPONENTES CREADOS 
 @NgModule({
@@ -37,7 +39,9 @@ import { MedicoComponent } from './mantenimiento/medicos/medico.component';
     PerfilComponent,
     HospitalesComponent,
     MedicosComponent,
-    MedicoComponent
+    MedicoComponent,
+    BusquedaComponent,
+    HomeComponent,
   ],
   exports:[
 
@@ -45,7 +49,8 @@ import { MedicoComponent } from './mantenimiento/medicos/medico.component';
     ProgressComponent,
     Grafica1Component,
     PagesComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    HomeComponent,
   ],
 
   imports: [

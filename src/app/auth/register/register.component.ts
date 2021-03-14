@@ -40,7 +40,7 @@ export class RegisterComponent  {
     .subscribe( resp =>{
 
       //INGRESAR AL DASHBOARD
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/dashboard');
 
     },(err) => {
       Swal.fire('Error',err.error.msg,'error');

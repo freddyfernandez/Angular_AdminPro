@@ -96,7 +96,7 @@ export class LoginComponent  implements OnInit{
              
               this.ngZone.run(()=>{
                  //INGRESAR AL DASHBOARD
-                  this.router.navigateByUrl('/');
+                  this.router.navigateByUrl('/dashboard');
               })
           });
 

@@ -31,6 +31,10 @@ export class UsuarioService {
     return localStorage.getItem('token') || '';
   }
 
+  get role(): 'ADMIN_ROLE' | 'USER_ROLE'{
+    return this.usuario.role;
+  }
+
   get uid():string{
 
     return this.usuario.uid || '';
@@ -45,21 +49,30 @@ export class UsuarioService {
   }
 
   googleInit() {
-    gapi.load('auth2', ()=>{
+    return new Promise<void>( resolve => {
+    gapi.load('auth2', () => {
      
       this.auth2 = gapi.auth2.init({
         client_id: '988333701701-1ohpn6msr7hsaesifjergcfe9ge3ul9a.apps.googleusercontent.com',
         cookiepolicy: 'single_host_origin',
       
       });
-     
+      resolve();
     });
-  
-  };
+   })
+  }
+
+  guardarLocalStorage(token: string, menu:any){
+    localStorage.setItem('token',token);
+    localStorage.setItem('menu', JSON.stringify(menu));
+  }
 
   logout(){
     //BORRA EL DATO DEL TOKEN
     localStorage.removeItem('token');
+    //BORRA EL MENU
+    localStorage.removeItem('menu');
+
     //REGRESA AL LOGIN PAGE
     //LA FUNCION SIGNOUT ESTA FUERA DE ANGULAR PARA CONTROLAR WARNINGS ENCAPSULARLO EN UN NGZONE
     this.auth2.signOut().then(()=>{
@@ -77,15 +90,14 @@ export class UsuarioService {
       }
     //RENUEVA TOKEN DEL STORAGE APLICATION
     }).pipe(
-      tap((resp:any)=>{
+      map((resp:any)=>{
         //COMO SE INSTANCIA UN METODO DE UNA CLASE A PARTIR  DE UN CONSTRUCTOR
         const {email,google,nombre,role,img='',uid} = resp.usuario;
         this.usuario = new Usuario(nombre,email,'',img,google,role,uid);
         //  
-        localStorage.setItem('token',resp.token);
+        this.guardarLocalStorage(resp.token,resp.menu);
         return true
       }),
-      map(resp=>true),
       //ATRAPA POSIBLES ERRORES DE AUTENTICACION
       catchError(error=>of(false))
     )
@@ -95,7 +107,7 @@ export class UsuarioService {
     return this.http.post(`${base_url}/usuarios`,formData)
     .pipe(
       tap((resp:any) =>{
-        localStorage.setItem('token',resp.token)
+        this.guardarLocalStorage(resp.token,resp.menu);
       })
     )
   };
@@ -107,11 +119,7 @@ export class UsuarioService {
       ...data,
       role: this.usuario.role
     };
-    return this.http.put(`${base_url}/usuarios/${this.uid}`,data,{
-      headers:{
-        'x-token':this.token
-      }
-    });
+    return this.http.put(`${base_url}/usuarios/${this.uid}`,data,this.headers);
 
   }
 
@@ -119,7 +127,7 @@ export class UsuarioService {
     return this.http.post(`${base_url}/login`,formData)
     .pipe(
       tap((resp:any) =>{
-        localStorage.setItem('token',resp.token)
+        this.guardarLocalStorage(resp.token,resp.menu);
         
       })
     )
@@ -130,7 +138,7 @@ export class UsuarioService {
     return this.http.post(`${base_url}/login/google`,{token})//token entre corchetes por ser un objeto
     .pipe(
       tap((resp:any) =>{
-        localStorage.setItem('token',resp.token)
+        this.guardarLocalStorage(resp.token,resp.menu);
       })
     );
   
