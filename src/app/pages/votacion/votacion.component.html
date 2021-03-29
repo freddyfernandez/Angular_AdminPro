@@ -1,0 +1,17 @@
+<h2>Votar por la pc del año</h2>
+<hr>
+<div class="row">
+    <div class="col">
+        <div class="card-columns">
+            <div class="card bg-dark" *ngFor="let pc of pcs">
+                <img [src]=pc.url class="card-img-top" [alt]=pc.name>
+                <div class="card-body">
+                    <h5 class="card-title">{{pc.name}}</h5>
+                    <p class="card-text">Click para votar</p>
+                    <button class="btn btn-block btn-outline-primary" (click)="votar(pc)"> Votar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

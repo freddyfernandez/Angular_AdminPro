@@ -1,0 +1,110 @@
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Nuevo Conocimiento</h4>
+                <h6 class="card-subtitle">Informacion</h6>
+                <form class="form p-t-20" [formGroup]="conocimientoForm" (submit)="guardarConocimiento()">
+
+
+                    <div class="form-group">
+                        <label for="exampleInputuname2">Descripcion</label>
+                        <div class="input-group">
+                            <input formControlName="nombre" type="text" class="form-control" id="exampleInputuname2" placeholder="Descripcion">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail2">Tipo</label>
+                        <div class="input-group">
+                            <select formControlName="tipo" class="form-control">
+                                <option> Seleccione Tipo</option>
+                                <option> Backend</option>
+                                <option> Frontend</option>
+                                <option> Devops</option>
+                   
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="text-left">
+                        <button type="submit" class="btn btn-success waves-effect waves-light m-r-10" [disabled]="conocimientoForm.invalid">
+                            <i class="fa fa-save"></i>
+                            Guardar Cambios
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="row animated fadeIn fast">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- en #TXTTERMINO SE ASIGNA EL VALOR -->
+                <input type="text" class="form-control" placeholder="buscar conocimiento" #txtTermino (keyup)="buscar(txtTermino.value)">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row animated fadeIn fast" *ngIf="cargando">
+    <div class="col-12">
+        <div class="alert alert-info text-center">
+            <h4 class="alert-heading">Cargando</h4>
+            <i class="fa fa-spin fa-refresh fa-2x"></i>
+            <p class="mb-0">Por favor espere</p>
+        </div>
+    </div>
+</div>
+
+<div class="row" *ngIf="!cargando">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="w100">Tipo</th>
+
+                                <th>Nombre</th>
+                                <th>Tipo</th>
+
+                                <th class="text-nowrap w100">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of conocimientos">
+
+                                <td class="text-center">
+                                    <img [src]="item.foto | imagen:'conocimientos'" [alt]="item.nombre" class="img100 cursor" (click)="abrirModal(item)">
+                                </td>
+
+                                <td><input type="text" class="form-control" placeholder="Nombre del hospital" [(ngModel)]="item.nombre"></td>
+                                <td><input type="text" class="form-control" placeholder="Nombre del hospital" [(ngModel)]="item.tipo"></td>
+                                <td class="text-nowrap text-center">
+                                    <a (click)="guardarCambios(item)" class="cursor" data-toggle="tooltip" data-original-title="Editar"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                                    <a (click)="eliminarCambios(item)" class="cursor" data-toggle="tooltip" data-original-title="Eliminar"> <i class="fa fa-close text-danger"></i> </a>
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="btn btn-secondary">Anterior</button> &nbsp;
+                <button class="btn btn-secondary">Siguiente</button>
+
+            </div>
+        </div>
+    </div>
+</div>

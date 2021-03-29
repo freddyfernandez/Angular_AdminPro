@@ -12,7 +12,7 @@ export class FileUploadService {
 
   //FECH API ES DE PETICION HTTP CON JAVASCRIPT
   //SIEMPRE QUE SE USE UN ASYNC USAR UN TRY CATH
-  async actualizarFoto(  archivo: File,tipo: 'usuarios'|'medicos'|'hospitales',id:string){
+  async actualizarFoto(  archivo: File,tipo: 'usuarios'|'medicos'|'hospitales'|'conocimientos',id:string){
 
     try {
 

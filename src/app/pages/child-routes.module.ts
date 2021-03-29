@@ -14,11 +14,14 @@ import { HospitalesComponent } from "./mantenimiento/hospitales/hospitales.compo
 import { MedicoComponent } from "./mantenimiento/medicos/medico.component";
 import { BusquedaComponent } from "./busqueda/busqueda.component";
 import { AdminGuard } from "../guards/admin.guard";
+import { ConocimientosComponent } from './mantenimiento/conocimientos/conocimientos.component';
+import { VotacionComponent } from './votacion/votacion.component';
 
 
 const childRoutes: Routes = [
-
-  {path: 'dashboard',component: DashboardComponent,data: { titulo: 'Dashboard' }},
+   
+  {path: '',component: DashboardComponent,data: { titulo: 'Dashboard' }},
+  {path: 'votacion',component: VotacionComponent,data: {titulo: 'Votacion'}},
   {path: 'progress',component: ProgressComponent,data: { titulo: 'Progress' }},
   {path: 'grafica1',component: Grafica1Component,data: { titulo: 'Grafica' }},
   {path: 'account-settings',component: AccountSettingsComponent,data: { titulo: 'Account-Settings' }},
@@ -38,6 +41,8 @@ const childRoutes: Routes = [
 
   //Rutas Admin
   {path: 'usuarios',canActivate: [AdminGuard],component: UsuariosComponent,data:{titulo:'Mantenimiento de Usuarios'}},
+  {path: 'conocimientos',canActivate: [AdminGuard],component: ConocimientosComponent,data:{titulo:'Mantenimiento de Conocimientos'}},
+
 ]
 
 

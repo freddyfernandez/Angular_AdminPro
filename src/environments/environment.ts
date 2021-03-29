@@ -4,7 +4,16 @@
 
 export const environment = {
   production: false,
-  base_url: 'http://localhost:3005/api'
+  base_url: 'http://localhost:3005/api',
+
+  firebaseConfig : {
+    apiKey: "AIzaSyBlnZt1M068ZE2iOTT72KXDX7XSyLdYQ-Y",
+    authDomain: "firestore---angular.firebaseapp.com",
+    projectId: "firestore---angular",
+    storageBucket: "firestore---angular.appspot.com",
+    messagingSenderId: "992246705221",
+    appId: "1:992246705221:web:bf00365aad5d7592a6072c"
+  }
 };
 
 /*

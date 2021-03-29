@@ -59,7 +59,7 @@ export class MedicosComponent implements OnInit, OnDestroy   {
 
   abrirModal(medico:Medico){
     this.modalImagenService.abrirModal('medicos',medico._id,medico.img);
- }
+  }
 
  eliminarCambios(medico: Medico){
   Swal.fire({

@@ -27,6 +27,8 @@ export class PagesComponent implements OnInit {
     
   }
 
+  
+
 }
 
 

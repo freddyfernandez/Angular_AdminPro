@@ -1,0 +1,695 @@
+<!-- Start Header  -->
+<header id="home" class="header_home">
+
+    <nav id="nav" class="nav1">
+        <div class="contenedor-nav">
+            <div class="logo">
+
+                <img src="./assets/images/logo.png" alt="freddy fernandez">
+                <a href="">Freddy <span>Fernandez</span></a>
+            </div>
+
+            <a class="ham-burger icono" id="open">
+                <span></span>
+                <span></span>
+            </a>
+
+            <div class="enlaces" id="enlaces">
+                <a href="#home">Inicio</a>
+                <a href="#service">Acerca de Mi</a>
+                <a href="#carrousel" onclick="mostrar(0)">Portafolio</a>
+                <a href="#start-today">Aptitudes</a>
+                <a href="#contact">Contacto</a>
+                <a href="login">Panel de Control</a>
+
+                <div class="social-media">
+                    <a href="#" onclick="redsocial(0)"><i class="fab fa-github" style="background-color: #3b5998;" aria-hidden="true"></i></a>
+
+                    <a href="#" onclick="redsocial(1)"><i class="fa fa-linkedin" style="background-color: #0e76a8;" aria-hidden="true"></i></a>
+
+                    <a href="#" onclick="redsocial(2)"><i class="fa fa-whatsapp" style="background-color: #25d366;" aria-hidden="true"></i></a>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+    </nav>
+    <div class="textos">
+        <img class="perfil" src="./assets/images/foto 2021.jpg">
+        <h1 class="h2fade">Programador de Software</h1>
+        <a href="./assets/CVFREDDY.pdf" download>
+            <img class="dowload" src="./assets/images/dowload.png">
+            <p>Descargar CV</p>
+        </a>
+
+    </div>
+
+    <a href="#service" class="go-down">
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </a>
+
+
+
+
+
+</header>
+<!-- End Header  -->
+
+<!-- Start Service -->
+<section class="service" id="service">
+    <div class="section-header">
+        <h1>Sobre mi</h1>
+        <div class="underline"></div>
+    </div>
+    <div>
+
+        <div class="content">
+
+            <div class="text box box1">
+
+                <p>
+                    Hola, soy Egresado de la Institucion Tecnologica Cibertec, Arequipa. Actualmente realizando mis practicas profesionales, interesado en áreas de análisis de sistemas y desarrollo de software full stack. Experiencia en administracion, área de ventas,almacen
+                    y soporte tecnico de computadoras.Dominio de ingles intermedio. Es un reto motivante la investigación autodidacta ya que demanda mucha disciplina y compromiso.
+                </p>
+                <p>Mis Fortalezas en el área de la informatica son: analizar,interpretar y mejarar los requerimientos del sistemas, asi como para diseñar la optima experiencia de usuario. Mis habilidades personales son el trabajo en equipo, proactividad
+                    y la honestidad. En mis tiempos libres me gusta hacer running, leer y escuchar rock clasico.</p>
+
+            </div>
+            <div class="accordian box box2">
+                <img src="./assets/images/cibertec.jpg" alt="" class="imgcontent">
+            </div>
+
+        </div>
+        <div class="content">
+            <div class="text box box1">
+
+                <img src="./assets/images/program.jpg" alt="" class="imgcontent">
+
+            </div>
+
+            <div class="accordian box box2">
+                <div class="accordian-container active">
+                    <div class="head">
+                        <h4>Analisis de Sistemas</h4>
+                        <span class="fa fa-angle-down"></span>
+                    </div>
+
+
+                    <div class="body">
+                        <p>En mis proyectos academicos priorizo las metodologias agiles, respetando los procesos de implementacion desde los requerimientos hasta el despliegue integrado de todo el sistema</p>
+                    </div>
+                </div>
+                <div class="accordian-container">
+                    <div class="head">
+                        <h4>Inteligencia Emocional</h4>
+                        <span class="fa fa-angle-up"></span>
+                    </div>
+                    <div class="body">
+                        <p>Una manera por la cual manejo la presion del trabajo, es mediante las pausas activas, escuchando a los demas y siendo amigable.</p>
+                    </div>
+                </div>
+                <div class="accordian-container">
+                    <div class="head">
+                        <h4>Perseverancia</h4>
+                        <span class="fa fa-angle-up"></span>
+                    </div>
+                    <div class="body">
+                        <p>En todo reto me cuesta iniciar los primeros procesos, ya que analizo en todas las posibles alternativas de solucion, luego a partir de la practica, esfuerzo y disciplina consigo objetivos trazados</p>
+                    </div>
+                </div>
+                <div class="accordian-container">
+                    <div class="head">
+                        <h4>Realista</h4>
+                        <span class="fa fa-angle-up"></span>
+                    </div>
+                    <div class="body">
+                        <p>Valoro compartir el trabajo en equipo responsable, honesto y organizado y me gusta participar en eventos de causa social</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- End Service -->
+
+<!-- carrousel Proyectos-->
+<section class="carrousel" id="carrousel">
+    <div class="section-header">
+        <h1>Proyectos Academicos</h1>
+        <div class="underline"></div>
+    </div>
+    <div class="carousel">
+
+
+        <div class="carousel__contenedor">
+            <button aria-label="Anterior" class="carousel__anterior">
+                    <i class="fas fa-chevron-left"></i>
+                    </button>
+
+            <div class="carousel__lista">
+
+                <div class="card_home">
+                    <div class="card-img-wrapper">
+                        <img src="./assets/images/pi1.jpg" alt="CEO">
+
+                    </div>
+
+                    <div class="card-info">
+
+                    </div>
+                    <div class="carta-info">
+                        <h2>BancaBCP</h2>
+
+                        <p>
+                            Transacciones Bancarias, Notificaciones en Tiempo Real.
+                        </p>
+                        <button onclick="mostrar(8)"><a href="#about_banco">Ver Reseña</a></button>
+                        <button><a href="https://github.com/freddyfernandez/Sistema_BCP" target="_blank">Ver Repositorio</a></button>
+
+                    </div>
+                </div>
+                <div class="card_home">
+                    <div class="card-img-wrapper">
+                        <img src="./assets/images/dsw1.png" alt="CEO">
+
+                    </div>
+
+                    <div class="card-info">
+
+                    </div>
+                    <div class="carta-info">
+                        <h2>Barshop</h2>
+
+                        <p>
+                            Sistema Web Ecommerce, Tienda Online.
+                        </p>
+                        <button onclick="mostrar(1)"><a href="#about">Ver Reseña</a></button>
+                        <button><a href="https://github.com/freddyfernandez/Barshop" target="_blank">Ver Repositorio</a></button>
+
+                    </div>
+                </div>
+
+                <div class="card_home">
+                    <div class="card-img-wrapper">
+                        <img src="./assets/images/lp1.jpg" alt="CEO">
+                    </div>
+                    <div class="carta-info">
+                        <h2>Digital Business</h2>
+
+                        <p>
+                            Sistema Web de Contabilidad.
+                        </p>
+                        <button onclick="mostrar(2)"><a href="#schedule">Ver Reseña</a></button>
+                        <button><a href="https://github.com/freddyfernandez/Proyecto_Digital_Business" target="_blank">Ver Repositorio</a></button>
+                    </div>
+                </div>
+                <div class="card_home">
+                    <div class="card-img-wrapper">
+                        <img src="./assets/images/dam4.jpg" alt="CEO">
+                    </div>
+                    <div class="carta-info">
+                        <h2>Social Club</h2>
+
+                        <p>
+                            Aplicacion Movil de Red social,Blog.
+                        </p>
+                        <button onclick="mostrar(3)"><a href="#classes">Ver Reseña</a></button>
+                        <button><a href="https://github.com/freddyfernandez/Social_Club_App" target="_blank">Ver Repositorio</a></button>
+                    </div>
+                </div>
+
+                <div class="card_home">
+                    <div class="card-img-wrapper">
+                        <img src="./assets/images/aew1.png" alt="CEO">
+                    </div>
+                    <div class="carta-info">
+                        <h2>Legend Gamer</h2>
+
+                        <p>
+                            Pagina Web Responsiva y animada
+                        </p>
+                        <button onclick="mostrar(5)"><a href="#gallery">Ver Reseña</a></button>
+                        <button><a href="https://github.com/freddyfernandez/Legend_Gamer" target="_blank">Ver Repositorio</a></button>
+                    </div>
+                </div>
+                <div class="card_home">
+                    <div class="card-img-wrapper">
+                        <img src="./assets/images/dse1.png" alt="CEO">
+                    </div>
+                    <div class="carta-info">
+                        <h2>Syfer</h2>
+
+                        <p>
+                            Sistema Desktop de ventas
+                        </p>
+                        <button onclick="mostrar(7)"><a href="#price-package">Ver Reseña</a></button>
+                        <button><a href="https://github.com/freddyfernandez/Proyecto_Syfer" target="_blank">Ver Repositorio</a></button>
+                    </div>
+                </div>
+                <div class="card_home">
+                    <div class="card-img-wrapper">
+                        <img src="./assets/images/aed.jpg" alt="CEO">
+                    </div>
+                    <div class="carta-info">
+                        <h2>Misti Resort</h2>
+                        <p>
+                            Sistema Desktop de Hospedajes
+                        </p>
+                        <button onclick="mostrar(6)"><a href="#schedule3">Ver Reseña</a></button>
+                        <button><a href="https://github.com/freddyfernandez/Hotel_Resort" target="_blank">Ver Repositorio</a></button>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <button aria-label="Siguiente" class="carousel__siguiente">
+                 <i class="fas fa-chevron-right"></i>
+	           </button>
+
+            <div role="tablist" class="carousel__indicadores"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- End carrousel -->
+
+<!--1 Start About -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="content">
+            <div class="box wow bounceInUp">
+                <div class="inner">
+                    <div class="img">
+                        <img src="./assets/images/dsw2.png" alt="about" />
+                    </div>
+                    <div class="text">
+                        <h4>Carrito de compras</h4>
+                        <p>Desarrollado en Visual Studio .Net, donde se implemento las funciones Action Result con sus respectivas sesiones,transacciones con SQlServer, Se crearon vistas parciales para la interaccion con los modulos del catálogo de producto
+                            hasta registrar el pedido</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box wow bounceInUp" data-wow-delay="0.2s">
+                <div class="inner">
+
+                    <div class="img">
+
+                        <iframe class="videoinicial" src="https://www.youtube.com/embed/lSONoR3aE3Y" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+							</iframe>
+
+
+                    </div>
+
+                    <div class="text">
+                        <h4>Funcionalidad</h4>
+                        <p>La estructura del diseño se realizo mediante HTML, CSS, JavaScript y jquery. La usabilidad es responsiva y adicionalmente tiene un diseño amigable para el reporte de ventas e inicio de sesion.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="box wow bounceInUp" data-wow-delay="0.4s">
+                <div class="inner">
+                    <div class="img">
+                        <img src="./assets/images/dsw3.png" alt="about" />
+                    </div>
+                    <div class="text">
+                        <h4>Panel de control</h4>
+                        <p>Para el acceso a los datos se realizo el consumo de servicios Api Rest y WCF al conectar con el controlador, aqui se creo el modulo de administración del sistema, en el cual podemos realizar el Mantenimiento y la validadcion de
+                            la base de datos Sql Server</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End About -->
+
+
+<!--2 Start Schedule -->
+<section class="schedule" id="schedule">
+    <div class="container">
+        <div class="content">
+            <div class="box text wow slideInLeft">
+                <h2>Estructura MVC Strut2</h2>
+                <p>
+                    Desarrollado en Eclipse Java, se implemento la solucion web con los frameworks Struts 2 y MyBatis en forma combinada.usando de la herramientas; Tomcat 9.0,IReport y se aplico la metodología MVC Struts 2. Gestionaremos la interacción con los datos mediante
+                    MYSQL,procedimientos almacenados,triggers. Los módulos creados son, la seccion por categorias de los productos, administración de clientes,trabajadores.socios y reporte de Pedidos.
+                </p>
+                <img src="./assets/images/daw1.png" alt="schedule" />
+            </div>
+            <div class="box timing wow slideInRight">
+                <div class="table">
+
+                    <img src="./assets/images/lp1.jpg" alt="schedule" />
+                    <p>
+                        El diseño incluyen Bootstrap, la gestion de la base de datos mediante sesiones por privilegios de administrador o socio, para actualizar nuestros registros, ademas el uso de Ajax para realizar busqueda por nombre o codigo y el manejo de archivos XML para
+                        interconectar las capas de las clases objetos,interfaces,action support y las vistas jsps.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Schedule -->
+
+<!--3 Start Classes -->
+<section class="classes" id="classes">
+    <div class="container">
+        <div class="content">
+            <div class="box img wow slideInLeft">
+                <img src="./assets/images/dam1.jpg" />
+            </div>
+            <div class="box text wow slideInRight">
+
+                <h2>Layouts</h2>
+                <p>
+                    Desarrollado en Android Studio, el manejo de la interface mediante propiedades Layouts en los archivos XML,se hizo uso de clases Activity para el manejo de vistas y controladores, adicionalmente se añadió el material design entre iconos y colores en nuestra
+                    aplicación móvil. Se aplicó la metodología por capas. Realizaremos la ejecución con el JDK de JAVA. La estructura del diseño será manejada archivos XML mediante componentes Layout.
+                </p>
+                <div class="class-items">
+                    <div class="item wow bounceInUp">
+                        <div class="item-img">
+                            <img src="./assets/images/dam2.jpg" />
+
+                        </div>
+                        <div class="item-text">
+                            <h4>Navegacion</h4>
+                            <p>Los módulos creados son: Inicio de Sesión, Creación de Post, Creación Historia, y Edición de Perfil.manipulacion de imageens con la libreria picaso, y eventos para realizar notificaciones.</p>
+
+                        </div>
+                    </div>
+                    <div class="item wow bounceInUp">
+                        <div class="item-text">
+                            <h4>Almacenamiento y Servicios</h4>
+                            <p>Todos los datos son guardados en la nube en Firebase,el registro de de sesion mediante facebook y una seccion para geolocalizar la ubicacion de dispositivos moviles de google services.</p>
+
+                        </div>
+                        <div class="item-img">
+                            <img src="./assets/images/dam3.jpg" alt="classes" />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Classes -->
+
+
+
+
+
+<!--5 Start Gallery -->
+<section class="gallery" id="gallery">
+
+    <div class="content">
+        <div class="box wow slideInLeft">
+            <img src="./assets/images/aew2.png" alt="gallery" />
+        </div>
+        <div class="box wow slideInRight">
+            <img src="./assets/images/aew3.png" alt="gallery" />
+        </div>
+        <div class="box wow slideInLeft">
+            <img src="./assets/images/aew4.png" alt="gallery" />
+        </div>
+        <div class="box wow slideInRight">
+            <img src="./assets/images/aew5.png" alt="gallery" />
+        </div>
+    </div>
+</section>
+<!-- End Gallery -->
+
+<!--6 Start Schedule -->
+<section class="schedule" id="schedule3">
+    <div class="container">
+        <div class="content">
+            <div class="box text wow slideInLeft">
+                <h2>Modelamiento DAO</h2>
+                <p>
+                    Desarrollado en Java , el modelamiento de paquetes ordenados en vistas,servicios,clases, herencias, interfaces, factories y reutilizacion de librerias, para validar registros,configurar la fecha, consultar la base de datos.
+                </p>
+                <img src="./assets/images/aed3.jpg" alt="schedule" />
+            </div>
+            <div class="box timing wow slideInRight">
+                <div class="table">
+
+                    <img src="./assets/images/aed4.jpg" alt="schedule" />
+                    <p>
+                        Generacion de reportes basados transact sql,procedimientos almacenados,consultas anidadas, reporte en jasper report, uso de trigger para actualizar tablas de la base de datos.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Schedule -->
+
+<!--7 Start Price -->
+<section class="price-package" id="price-package">
+    <div class="container">
+        <h2>Modelo MVC</h2>
+        <p class="title-p">Sistema de Ventas elaborado con Visual studio .Net, perzonalizable ya que esta programado bajo un paradigma de capas: datos,negocio y presentacion. </p>
+        <div class="content">
+            <div class="box wow bounceInUp">
+                <div class="inner">
+                    <div class="price-tag">
+                        Control de Acceso
+                    </div>
+                    <div class="img">
+                        <img src="./assets/images/dse4.png" alt="price" />
+                    </div>
+                    <div class="text">
+
+                        <p>Asignacion de permisos</p>
+                        <p>Restricions para usuarios</p>
+                        <p>Formulario de ingreso</p>
+                        <p>Bloqueo de formularios</p>
+                        <p>Verificar acceso</p>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="box wow bounceInUp" data-wow-delay="0.2s">
+                <div class="inner">
+                    <div class="price-tag">
+                        Gestion de Clientes
+                    </div>
+                    <div class="img">
+                        <img src="./assets/images/dse2.png" alt="price" />
+                    </div>
+                    <div class="text">
+
+                        <p>Editar informacion</p>
+                        <p>Datos legales</p>
+                        <p>Buscador por nombres</p>
+                        <p>Busqueda por ruc</p>
+                        <p>Comprobantes de pago</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="box wow bounceInUp" data-wow-delay="0.4s">
+                <div class="inner">
+                    <div class="price-tag">
+                        Gestion de Almacen
+                    </div>
+                    <div class="img">
+                        <img src="./assets/images/dse3.png" alt="price" />
+                    </div>
+                    <div class="text">
+
+                        <p>Catalogo por categorias</p>
+                        <p>Codigo de barras</p>
+                        <p>Ingreso de imagenes</p>
+                        <p>Control de stock</p>
+                        <p>Reporte por fechas</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Price -->
+
+<!--8 About_Banco -->
+<section class="schedule" id="about_banco">
+    <div class="container">
+        <div class="content">
+            <div class="box text wow slideInLeft">
+                <h2>Estructura Cliente - Servidor</h2>
+                <p>
+                    Desarrollado en Spring Tool Suite Java. Se aplico la metodología JPA (persistencia de datos). Almacen de datos alojado en hostinger con base de datos MYSQL, la web desplegada en heroku y el control de versiones con github. En la web servidor se desarrollo
+                    la estructura del servicio Api Rest. En la web cliente se implemento Los módulos de inicio de sesion para administradores o clientes, configuracion de cuenta o perfil, Gestion de Publicidad bancaria,transferencia entre cuentas.
+
+                </p>
+                <img src="./assets/images/pi4.jpg" />
+
+            </div>
+            <div class="box timing wow slideInRight">
+                <div class="table">
+
+                    <img src="./assets/images/pi2.jpg" />
+
+                    <p>
+                        Validacion de datos numerico,letras,longitud, datos vacios,etc desde el controlador spring, AJAX y javascript. Testeado en Junit y Rational Tester. Como resultado obtenemos las notificaciones en tiempo real de cada operacion realizada.
+                    </p>
+                    <img src="./assets/images/pi3.jpg" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About_Banco -->
+
+
+<!-- Start Habilidades -->
+<section class="start-today" id="start-today">
+    <div class="section-header">
+        <h1>Aptitudes Tecnicas</h1>
+        <div class="underline"></div>
+    </div>
+
+    <div class="containerCard">
+        <div class="content">
+            <section class="card2">
+                <div class="card_inner">
+                    <div class="card_inner_circle">
+                        <img class="img_circle" src="./assets/images/rocket.png">
+                    </div>
+                    <div class="card_inner_header">
+                        <img class="img_header" src="./assets/images/eclipse.jpg">
+                    </div>
+                    <div class="card_inner_content">
+
+                        <div class="price">Backend</div>
+                        <div class="text" *ngFor="let item of conocimientos">
+                            <ng-container *ngIf="item.tipo=='Backend'">
+                                <p>{{item.nombre}}</p>
+                            </ng-container>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section class="card2">
+                <div class="card_inner">
+                    <div class="card_inner_circle">
+                        <img class="img_circle" src="./assets/images/cog.png">
+                    </div>
+                    <div class="card_inner_header">
+                        <img class="img_header" src="./assets/images/vsCode.jpg">
+                    </div>
+                    <div class="card_inner_content">
+
+                        <div class="price">Frontend</div>
+                        <div class="text" *ngFor="let item of conocimientos">
+                            <ng-container *ngIf="item.tipo=='Frontend'">
+                                <p>{{item.nombre}}</p>
+                            </ng-container>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+            <section class="card2">
+                <div class="card_inner">
+                    <div class="card_inner_circle">
+                        <img class="img_circle" src="./assets/images/paperplane.png">
+                    </div>
+                    <div class="card_inner_header">
+                        <img class="img_header" src="./assets/images/github.jpg">
+                    </div>
+                    <div class="card_inner_content">
+                        <div class="price">Devops</div>
+                        <div class="text" *ngFor="let item of conocimientos">
+                            <ng-container *ngIf="item.tipo=='Devops'">
+                                <p>{{item.nombre}}</p>
+                            </ng-container>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+</section>
+<!-- End Start Habilidades -->
+
+<!-- Start Contact -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="content">
+            <div class="box text wow slideInRight">
+
+                <div class="info">
+                    <ul>
+                        <li><span class="fa fa-map-marker"></span> Cerro colorado, Arequipa,Perú</li>
+
+                        <li><span class="fa fa-envelope"></span> paratulibro@hotmail.com</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="box text wow slideInRight">
+                <h2>Mis Redes Sociales:</h2>
+                <div class="social">
+                    <a href="" onclick="redsocial(0)"><span class="fa fa-github" ></span></a>
+                    <a href="" onclick="redsocial(1)"><span class="fa fa-linkedin"></span></a>
+                    <a href="" onclick="redsocial(2)"><span class="fa fa-whatsapp"></span></a>
+                    <!--<a href=""><span class="fa fa-youtube-play"></span></a>-->
+
+                </div>
+
+
+
+                <div class="copy">
+                    &copy; Hecho por: Freddy Fernandez
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Contact -->
+<!--CHATS-->
+<section>
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <a id="app-messenger" target="_blanck" href="https://m.me/msysperu">
+        <i class="fab  fa-facebook-messenger"></i>
+    </a>
+    <div id="fb-root"> </div>
+    <!-- Your Chat Plugin code -->
+    <div class="fb-customerchat" attribution="setup_tool" page_id="101114894993855" logged_in_greeting="Hola! como puedo ayudarte?" logged_out_greeting="Hola! como puedo ayudarte?" greeting_dialog_display="fade">
+
+    </div>
+
+</section>

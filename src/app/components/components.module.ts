@@ -8,12 +8,14 @@ import { ModalImagenComponent } from './modal-imagen/modal-imagen.component';
 
 
 
+
 @NgModule({
   declarations: [IncrementadorComponent, ModalImagenComponent],
 
   exports:[
     IncrementadorComponent,
-    ModalImagenComponent        ],
+    ModalImagenComponent,
+  ],
   imports: [
    
     CommonModule,

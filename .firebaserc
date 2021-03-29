@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "firestore---angular": {
+      "hosting": {
+        "adminPro": [
+          "firestore---angular"
+        ]
+      }
+    }
+  }
+}

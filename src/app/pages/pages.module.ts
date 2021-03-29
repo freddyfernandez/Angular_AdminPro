@@ -8,6 +8,10 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { ComponentsModule } from '../components/components.module';
 import { PipesModule } from '../pipes/pipes.module';
+import { ChartsModule} from 'ng2-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 
 //Componentes
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -23,7 +27,8 @@ import { HospitalesComponent } from './mantenimiento/hospitales/hospitales.compo
 import { MedicosComponent } from './mantenimiento/medicos/medicos.component';
 import { MedicoComponent } from './mantenimiento/medicos/medico.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
-import { HomeComponent } from './home/home.component';
+import { ConocimientosComponent } from './mantenimiento/conocimientos/conocimientos.component';
+import { VotacionComponent } from './votacion/votacion.component';
 
 //AQUI SE ACTUALIZA LOS NUEVOS COMPONENTES CREADOS 
 @NgModule({
@@ -41,27 +46,31 @@ import { HomeComponent } from './home/home.component';
     MedicosComponent,
     MedicoComponent,
     BusquedaComponent,
-    HomeComponent,
+    ConocimientosComponent,
+    VotacionComponent,
   ],
   exports:[
 
-    DashboardComponent,
     ProgressComponent,
     Grafica1Component,
     PagesComponent,
     AccountSettingsComponent,
-    HomeComponent,
+    DashboardComponent
+
   ],
 
   imports: [
     
     FormsModule,
+    ChartsModule,
     RouterModule,
     CommonModule,
     SharedModule,
     ComponentsModule,
     ReactiveFormsModule,
-    PipesModule
+    PipesModule,
+    NgxChartsModule,
+    BrowserAnimationsModule
   
   ]
 })

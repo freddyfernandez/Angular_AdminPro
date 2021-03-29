@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { PagesComponent } from './pages/pages.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -23,9 +24,9 @@ describe('AppComponent', () => {
   });
 
   it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+    const fixture = TestBed.createComponent(PagesComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('adminPro app is running!');
+    expect(compiled.querySelector('.footer').textContent).toContain('© 2017 Admin Pro by wrappixel.com');
   });
 });

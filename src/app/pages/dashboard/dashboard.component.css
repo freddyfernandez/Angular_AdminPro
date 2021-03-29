@@ -1,0 +1,8 @@
+.chart-container,
+h1 {
+    display: grid;
+    width: 80%;
+    height: 400px;
+    background-color: blue;
+    text-align: center;
+}
